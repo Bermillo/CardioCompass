@@ -1,0 +1,104 @@
+@import "reset-style.css";
+
+/* BASE STYLES */
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+    --clr-bder: #DADADA;
+    --indigo-dye: #08415cff;
+    --persian-red: #cc2936ff;
+    --tea-rose-red: #ebbab9ff;
+    --blue-munsell: #388697ff;
+    --aquamarine: #b5ffe1ff;
+    --indigo-dye: hsla(199, 84%, 20%, 1);
+    --persian-red: hsla(355, 67%, 48%, 1);
+    --tea-rose-red: hsla(1, 56%, 82%, 1);
+    --blue-munsell: hsla(191, 46%, 41%, 1);
+    --aquamarine: rgb(179, 255, 225);
+
+}
+
+@keyframes fadeInTranslate {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+
+.container-reg {
+    background-color: white;
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    font-family: Montserrat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+    display: flex;
+    overflow: scroll;
+    padding: 50px;
+    animation: fadeInTranslate 0.7s;
+
+}
+
+.return {
+    display: grid;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    animation: fadeInTranslate 0.7s forwards;
+    cursor: pointer;
+    ;
+
+    & span {
+        align-self: center;
+        max-height: 100%;
+        max-width: 100%;
+        font-size: 20px;
+        top: 10px;
+    }
+
+    & a {
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        align-self: center;
+        max-height: 100%;
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+}
+
+.content {
+    max-height: fit-content;
+    max-width: fit-content;
+
+    & .emphasized-text {
+        color: #1363a8;
+    }
+
+    & li {
+        list-style-type: decimal;
+        color: black;
+    }
+}

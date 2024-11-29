@@ -1,0 +1,404 @@
+body {
+    font-family: Raleway;
+}
+
+
+* {
+    margin: 0;
+}
+
+h1 {
+    margin: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Navigation Bar CSS */
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+
+.navigation-bar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 1px 2px rgba(0, 0, 0, 0.19);
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    color: black;
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+}
+
+.topnav {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Raleway', serif;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-element,
+.navdropbtn {
+    margin: 0 0.75rem;
+}
+
+.navdropbtn {
+    background: none;
+    border: none;
+    font-family: 'Raleway', serif;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    padding: 20px;
+}
+
+.navdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    /* Adjusted min-width to fit the content */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navdropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    /* Adjusted padding to remove extra space */
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navdropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .navdropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific CSS for the logo */
+.logo-text {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    cursor: pointer;
+    font-family: "Raleway", serif;
+}
+
+.logo-text a {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    align-self: center;
+    font-family: 'Raleway', serif;
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    text-decoration: none;
+}
+
+.website-logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* User profile button */
+.profile-btn .material-symbols-outlined {
+    font-size: 48px;
+    color: black;
+    border: none !important;
+}
+
+.solo {
+    margin-top: 0.3rem;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-family: 'Raleway', serif;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.logo-text img {
+    max-width: 95%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.user-side {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 330px;
+    border: none !important;
+
+    & .profile-btn {
+        background-color: white;
+        border: none;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2.5rem;
+    overflow-y: auto;
+}
+
+
+.table-container {
+    margin: 0 auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.scrollable-table {
+    max-height: 400px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+/*testing*/
+.dropdown-container {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: #012d61;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    width: 100%;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #1a4c8a;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: inherit;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    border: none;
+    flex-direction: column;
+}
+
+.show {
+    display: flex;
+}
+
+.filterbtn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #23487d;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/*Tables*/
+.scrollable-table table th {
+    position: sticky;
+    top: 0;
+    background-color: #34689c;
+    z-index: 1;
+
+}
+
+#doctors,
+#customers {
+    display: none;
+}
+
+.accounts {
+    display: block;
+}
+
+table thead tr {
+    background-color: #1a4c8a;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    z-index: 1;
+    overflow: hidden;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    z-index: 1;
+    overflow: hidden;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #1a4c8a;
+}
+
+/* Edit and Delete Buttons */
+.editBtn,
+.editDocBtn,
+.delDocBtn,
+.delAccBtn {
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.editBtn,
+.editDocBtn {
+    background-color: #1a4c8a;
+}
+
+.delAccBtn,
+.delDocBtn {
+    background-color: #d9534f;
+}
+
+.editBtn:hover,
+.editDocBtn:hover {
+    background-color: #133b6f;
+}
+
+.delAccBtn:hover,
+.delDocBtn:hover {
+    background-color: #c9302c;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.addCustomerBtn,
+.addDoctorBtn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #012d61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addCustomerBtn:hover,
+.addDoctorBtn:hover,
+.filterbtn:hover {
+    background-color: #1a4c8a;
+}

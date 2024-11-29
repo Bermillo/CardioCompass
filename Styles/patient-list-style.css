@@ -1,0 +1,490 @@
+/* Patient List CSS */
+.table1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto; 
+    position: sticky;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.table1 table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.table1 th {
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.table1 td {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+body {
+    font-family: 'Raleway', serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow: scroll;
+
+    & .footer {
+        justify-self: flex-end;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    margin: 1rem;
+    margin-top: 1.5rem;
+}
+
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+/* Wrapper CSS for Navigation Bar */
+.navigation-bar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 1px 2px rgba(0, 0, 0, 0.19);
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    color: black;
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+}
+
+.topnav {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Raleway', serif;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-element,
+.navdropbtn {
+    margin: 0 0.75rem;
+}
+
+.navdropbtn {
+    background: none;
+    border: none;
+    font-family: 'Raleway', serif;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    padding: 20px;
+}
+
+.navdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    /* Adjusted min-width to fit the content */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navdropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navdropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .navdropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border: none;
+}
+
+/* Return Button*/
+.back {
+    display: flex;
+    margin-left: 100px;
+    margin-bottom: 1rem;
+}
+
+/* Edit Button */
+.editbutton {
+    display: flex;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Specific CSS for the logo */
+.logo-text {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    cursor: pointer;
+    font-family: "Raleway", serif;
+}
+
+.logo-text a {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    align-self: center;
+    font-family: 'Raleway', serif;
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    text-decoration: none;
+}
+
+.website-logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* User profile button */
+.profile-btn .material-symbols-outlined {
+    font-size: 48px;
+    color: black;
+    border: none !important;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-family: 'Raleway', serif;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.logo-text img {
+    max-width: 95%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.user-side {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 330px;
+    border: none !important;
+
+    & .profile-btn {
+        background-color: white;
+        border: none;
+    }
+}
+
+
+/* Footer */
+footer {
+    color: white;
+    max-width: 100%;
+    height: 400px;
+    margin-top: 25rem;
+    background-color: rgb(1, 45, 97);
+}
+
+.footer {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: column;
+
+    & hr {
+        place-self: center;
+    }
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer-bottom {
+    & hr {
+        width: 80%;
+    }
+
+    & p {
+        color: white;
+        font-size: 1rem;
+    }
+}
+
+.footer-bottom button {
+    text-align: center;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.social-icon a {
+    font-size: 30px;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+
+.copy-right {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Raleway", serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    height: 9px;
+    width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #1D1E22;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: #1D1E22;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: #1D1E22;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #666B7A;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #666B7A;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #666B7A;
+}
+
+/* Styling for the button with class 'back' */
+.back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(1, 45, 97); /* Green background */
+    color: white; /* White text */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove border */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scale */
+}
+
+.back:hover {
+    background-color: rgb(7, 71, 150); /* Darker green on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.back:focus {
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 5px 2px rgba(1, 45, 97, 0.7); /* Green glow effect */
+}
+
+.back:active {
+    background-color: rgb(1, 45, 97); /* Even darker green when clicked */
+    transform: scale(1); /* Return to normal size when clicked */
+}
+
+/* Styling for the edit button */
+.editbutton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e06d6d; /* Soft red-orange background */
+    color: white; /* White text */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scale */
+}
+
+.editbutton:hover {
+    background-color: #FFB3B3; /* Darker red-orange on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.editbutton:focus {
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 5px 2px rgba(255, 221, 221, 0.7); /* Glow effect */
+}
+
+.editbutton:active {
+    background-color:  #FF9999; /* Even darker red-orange when clicked */
+    transform: scale(1); /* Return to normal size when clicked */
+}
+
+/* Sort */
+.sort {
+    margin-left: 102px;
+    margin-bottom: 10px;
+}

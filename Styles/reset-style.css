@@ -1,0 +1,12 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
