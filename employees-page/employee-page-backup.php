@@ -89,7 +89,7 @@ if (!$con) {
     </button>
     </div>
     <div>
-        <button class="doctor-profile" onclick="Screening()">
+        <button class="doctor-profile" onclick="Screening1()">
             <img src="/CardioCompass/media/heart_screening_symbol.svg">
             Heart Screening
     </button>
@@ -144,9 +144,6 @@ if (!$con) {
         const element = document.getElementById("info");
         element.scrollIntoView();
     }
-    function redirectToDonate() {
-        window.location.href = "/CardioCompass/customer-page/donation-page.php";
-    }
     function ToPatients() {
         window.location.href = "/CardioCompass/employees-page/patient-list.php?EmployeeID=<?php echo $_SESSION['employee_id']; ?>";
     }
@@ -155,6 +152,9 @@ if (!$con) {
     }
     function Screening() {
         window.location.href = "/CardioCompass/employees-page/heart-disease-screening.php?EmployeeID=<?php echo $_SESSION['employee_id']; ?>";
+    }
+    function Screening1() {
+        window.location.href = "/CardioCompass/employees-page/heart-disease-screening1.php?EmployeeID=<?php echo $_SESSION['employee_id']; ?>";
     }
 </script>
 </body>
